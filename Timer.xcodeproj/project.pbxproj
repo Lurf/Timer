@@ -14,7 +14,6 @@
 		4FB4FD30258CDF1500E046E0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FB4FD2E258CDF1500E046E0 /* Main.storyboard */; };
 		4FB4FD32258CDF1500E046E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FB4FD31258CDF1500E046E0 /* Assets.xcassets */; };
 		4FB4FD35258CDF1500E046E0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FB4FD33258CDF1500E046E0 /* LaunchScreen.storyboard */; };
-		4FB4FD40258CDF1500E046E0 /* RootVCSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB4FD3F258CDF1500E046E0 /* RootVCSpec.swift */; };
 		4FB4FD4B258CDF1500E046E0 /* TimerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB4FD4A258CDF1500E046E0 /* TimerUITests.swift */; };
 		4FB4FD6F258CE3E800E046E0 /* Nimble in Frameworks */ = {isa = PBXBuildFile; productRef = 4FB4FD6E258CE3E800E046E0 /* Nimble */; };
 		4FB4FD75258CE46E00E046E0 /* Quick in Frameworks */ = {isa = PBXBuildFile; productRef = 4FB4FD74258CE46E00E046E0 /* Quick */; };
@@ -48,7 +47,6 @@
 		4FB4FD34258CDF1500E046E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4FB4FD36258CDF1500E046E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4FB4FD3B258CDF1500E046E0 /* TimerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TimerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		4FB4FD3F258CDF1500E046E0 /* RootVCSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootVCSpec.swift; sourceTree = "<group>"; };
 		4FB4FD41258CDF1500E046E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4FB4FD46258CDF1500E046E0 /* TimerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TimerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FB4FD4A258CDF1500E046E0 /* TimerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerUITests.swift; sourceTree = "<group>"; };
@@ -128,7 +126,6 @@
 		4FB4FD3E258CDF1500E046E0 /* TimerTests */ = {
 			isa = PBXGroup;
 			children = (
-				4FB4FD3F258CDF1500E046E0 /* RootVCSpec.swift */,
 				4FB4FD41258CDF1500E046E0 /* Info.plist */,
 			);
 			path = TimerTests;
@@ -294,7 +291,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4FB4FD40258CDF1500E046E0 /* RootVCSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
