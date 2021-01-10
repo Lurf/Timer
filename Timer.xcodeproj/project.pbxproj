@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F5A523825AAC49800F538EE /* RootVCSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5A523725AAC49800F538EE /* RootVCSpec.swift */; };
+		4F5A523D25AAC59200F538EE /* UIStoryboard+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5A523C25AAC59200F538EE /* UIStoryboard+Extention.swift */; };
+		4F5A524225AAC62E00F538EE /* NSObject+className.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5A524125AAC62E00F538EE /* NSObject+className.swift */; };
+		4F5A526425AACC2600F538EE /* ExclusiveButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5A526325AACC2600F538EE /* ExclusiveButton.swift */; };
 		4F7F91A925A98F2400A22119 /* UIView+findSubview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7F91A825A98F2400A22119 /* UIView+findSubview.swift */; };
 		4FB4FD29258CDF1400E046E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB4FD28258CDF1400E046E0 /* AppDelegate.swift */; };
 		4FB4FD2B258CDF1500E046E0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB4FD2A258CDF1500E046E0 /* SceneDelegate.swift */; };
@@ -37,6 +41,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4F5A523625AAC49800F538EE /* TimerTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TimerTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		4F5A523725AAC49800F538EE /* RootVCSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootVCSpec.swift; sourceTree = "<group>"; };
+		4F5A523C25AAC59200F538EE /* UIStoryboard+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Extention.swift"; sourceTree = "<group>"; };
+		4F5A524125AAC62E00F538EE /* NSObject+className.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+className.swift"; sourceTree = "<group>"; };
+		4F5A526325AACC2600F538EE /* ExclusiveButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExclusiveButton.swift; sourceTree = "<group>"; };
 		4F7F91A825A98F2400A22119 /* UIView+findSubview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+findSubview.swift"; sourceTree = "<group>"; };
 		4FB4FD25258CDF1400E046E0 /* Timer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Timer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FB4FD28258CDF1400E046E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -80,10 +89,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4F5A525725AACB6700F538EE /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				4F5A526225AACC1700F538EE /* Common */,
+				4FB4FD2E258CDF1500E046E0 /* Main.storyboard */,
+				4FB4FD2C258CDF1500E046E0 /* RootVC.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		4F5A525825AACB8F00F538EE /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				4FB4FD28258CDF1400E046E0 /* AppDelegate.swift */,
+				4FB4FD2A258CDF1500E046E0 /* SceneDelegate.swift */,
+				4FB4FD31258CDF1500E046E0 /* Assets.xcassets */,
+				4FB4FD33258CDF1500E046E0 /* LaunchScreen.storyboard */,
+				4FB4FD36258CDF1500E046E0 /* Info.plist */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		4F5A526225AACC1700F538EE /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				4F5A526325AACC2600F538EE /* ExclusiveButton.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 		4F7F91A725A98F1000A22119 /* Extention */ = {
 			isa = PBXGroup;
 			children = (
 				4F7F91A825A98F2400A22119 /* UIView+findSubview.swift */,
+				4F5A523C25AAC59200F538EE /* UIStoryboard+Extention.swift */,
+				4F5A524125AAC62E00F538EE /* NSObject+className.swift */,
 			);
 			path = Extention;
 			sourceTree = "<group>";
@@ -111,14 +152,9 @@
 		4FB4FD27258CDF1400E046E0 /* Timer */ = {
 			isa = PBXGroup;
 			children = (
-				4FB4FD28258CDF1400E046E0 /* AppDelegate.swift */,
+				4F5A525825AACB8F00F538EE /* Application */,
+				4F5A525725AACB6700F538EE /* UI */,
 				4F7F91A725A98F1000A22119 /* Extention */,
-				4FB4FD2A258CDF1500E046E0 /* SceneDelegate.swift */,
-				4FB4FD2C258CDF1500E046E0 /* RootVC.swift */,
-				4FB4FD2E258CDF1500E046E0 /* Main.storyboard */,
-				4FB4FD31258CDF1500E046E0 /* Assets.xcassets */,
-				4FB4FD33258CDF1500E046E0 /* LaunchScreen.storyboard */,
-				4FB4FD36258CDF1500E046E0 /* Info.plist */,
 			);
 			path = Timer;
 			sourceTree = "<group>";
@@ -127,6 +163,8 @@
 			isa = PBXGroup;
 			children = (
 				4FB4FD41258CDF1500E046E0 /* Info.plist */,
+				4F5A523725AAC49800F538EE /* RootVCSpec.swift */,
+				4F5A523625AAC49800F538EE /* TimerTests-Bridging-Header.h */,
 			);
 			path = TimerTests;
 			sourceTree = "<group>";
@@ -216,6 +254,7 @@
 					};
 					4FB4FD3A258CDF1500E046E0 = {
 						CreatedOnToolsVersion = 12.2;
+						LastSwiftMigration = 1230;
 						TestTargetID = 4FB4FD24258CDF1400E046E0;
 					};
 					4FB4FD45258CDF1500E046E0 = {
@@ -280,6 +319,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F5A523D25AAC59200F538EE /* UIStoryboard+Extention.swift in Sources */,
+				4F5A524225AAC62E00F538EE /* NSObject+className.swift in Sources */,
+				4F5A526425AACC2600F538EE /* ExclusiveButton.swift in Sources */,
 				4FB4FD2D258CDF1500E046E0 /* RootVC.swift in Sources */,
 				4F7F91A925A98F2400A22119 /* UIView+findSubview.swift in Sources */,
 				4FB4FD29258CDF1400E046E0 /* AppDelegate.swift in Sources */,
@@ -291,6 +333,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F5A523825AAC49800F538EE /* RootVCSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -460,7 +503,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RF494TFV4D;
-				INFOPLIST_FILE = Timer/Info.plist;
+				INFOPLIST_FILE = Timer/Application/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -479,7 +522,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RF494TFV4D;
-				INFOPLIST_FILE = Timer/Info.plist;
+				INFOPLIST_FILE = Timer/Application/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -496,6 +539,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RF494TFV4D;
 				INFOPLIST_FILE = TimerTests/Info.plist;
@@ -507,6 +551,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Lurf.iOS.TimerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TimerTests/TimerTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Timer.app/Timer";
@@ -518,6 +564,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RF494TFV4D;
 				INFOPLIST_FILE = TimerTests/Info.plist;
@@ -529,6 +576,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Lurf.iOS.TimerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TimerTests/TimerTests-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Timer.app/Timer";
