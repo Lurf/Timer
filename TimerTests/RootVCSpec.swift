@@ -1,61 +1,46 @@
-import UIKit
-import Firebase
+//
+//  RootVCSpec.swift
+//  TimerTests
+//
+//  Created by Lurf on 2021/01/09.
+//
 
-class LoginViewController: UIViewController {
-    @IBOutlet weak var mailAddressTextField: UITextField!
-    @IBOutlet weak var passwordTextField: UITextField!
-    @IBOutlet weak var displayNameTextField: UITextField!
-    //ログインボタンを押した時に呼ばれるメソッド
-    @IBAction func handleLoginButton(_ sender: Any) {
-        if let address = mailAddressTextField.text, let password = passwordTextField.text {
-            //アドレスとパスワードと表示名のいずれかでも入力されていない時は何もしない
-            if address.isEmpty || password.isEmpty {
-                return
-            }
-            Auth.auth().signIn(withEmail: address, password: password) { authResult, error in
-                if let error = error {
-                    print ("DEBUG_PRINT: " + error.localizedDescription)
-                    return
-                }
-                print ("DEBUG_PRINT: ログインに成功しました。")
-                //画面を閉じてタブ画面に戻る
-                self.dismiss(animated: true, completion: nil)
-            }
+import UIKit
+import Quick
+import Nimble
+@testable import Timer
+
+final class RootVCSpec: QuickSpec {
+    override func spec() {
+        var subject: RootVC!
+        var keyWindow: UIWindow? {
+            return UIApplication.shared.connectedScenes
+                .filter({$0.activationState == .foregroundActive})
+                .map({$0 as? UIWindowScene})
+                .compactMap({$0})
+                .first?.windows
+                .filter({$0.isKeyWindow}).first
         }
-    }
-    
-    //アカウント作成ボタンをタップした時に呼ばれるメソッド
-    @IBAction func handleCreateAccountButton(_ sender: Any) {
-        if let address = mailAddressTextField.text, let password = passwordTextField.text, let displayName = displayNameTextField.text {
-            //アドレスとパスワードと表示名のいずれかでも入力されていない時は何もしない
-            if address.isEmpty || password.isEmpty || displayName.isEmpty {
-                print ("DEBUG_PRINT:　何かが空文字です。")
-                return
+        
+        describe("表示要素") {
+            beforeEach {
+                subject = RootVC.viewController()
             }
-            //アドレスとパスワードでユーザー作成。ユーザー作成に成功すると自動的にログインする
-            Auth.auth().createUser(withEmail: address, password: password) { AuthResult, error in
-                if let error = error {
-                    //エラーがあったら原因をprintしてreturnすることで以降の処理を実行せずに処理を終了する
-                    print ("DEBUG_PRINT: " + error.localizedDescription)
-                    return
+            context("ロードが完了した場合") {
+                beforeEach {
+                    keyWindow?.rootViewController = subject
                 }
-                print ("DEBUG_PRINT: ユーザー作成に成功しました。")
-                //表示名を設定する
-                let user = Auth.auth().currentUser
-                if let user = user {
-                    let changeRequest = user.createProfileChangeRequest()
-                    changeRequest.displayName = displayName
-                    changeRequest.commitChanges { error in
-                        if let error = error {
-                            //プロフィールの更新でエラー発生
-                            print ("DEBUG_PRINT: " + error.localizedDescription)
-                            return
-                        }
-                        print ("DEBUG_PRINT: [displayName = \(user.displayName!)]の設定に成功しました。")
-                        //画面を閉じてタブ画面に戻る
-                        self.dismiss(animated: true, completion: nil)
-                    }
+                it("タブバーを表示する") {
+                    let tabbar = subject.view.findSubview(ofType: UITabBar.self)
+                    expect(tabbar).toNot(beNil())
                 }
+                it("1分タイマーボタンを表示する") {
+                    let button = subject.view.findButton(
+                        withAccessibilityId: "oneMinuteButton"
+                    )
+                    expect(button?.titleLabel?.text).to(equal("1分タイマー"))
+                }
+
             }
         }
     }
